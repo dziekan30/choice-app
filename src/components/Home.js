@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { MDBInput } from "mdbreact";
+import { Container } from 'react-bootstrap';
 
 export default class Home extends Component {
   state = {
@@ -29,7 +30,7 @@ export default class Home extends Component {
 
   genTip = (event) => {
     event.preventDefault();
-    let tip = parseFloat(this.state.total * this.state.service).toFixed(2)
+    let tip = parseFloat(this.state.total * (this.state.service / 100)).toFixed(2)
     let totalTipPerPerson = parseFloat(tip / this.state.partySize).toFixed(2)
     this.setState({
       totalTip: tip,
@@ -39,26 +40,29 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1>My tip</h1>
-        <form onSubmit={this.genTip}>
-          <label>
-            Bill Total:
-            <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
-          </label>
-          <label>
-            Service:
-            <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
-          </label>
-          <label>
-            Party Size:
-            <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
-          </label>
-          <input type="submit" />
-        </form>
-        <p>tip: ${this.state.totalTip}</p>
-        <p>perperson: ${this.state.tipPerPerson}</p>
-      </div>
+      <Container>
+        <div className="container">
+          <h1>Count My Tip</h1>
+          <form onSubmit={this.genTip}>
+            <label>
+              Bill Total:
+              <i class="fas fa-dollar-sign"></i>
+              <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
+            </label>
+            <label>
+              Service: %
+              <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
+            </label>
+            <label>
+              Party Size:
+              <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
+            </label>
+            <input type="submit" />
+          </form>
+          <p>tip: ${this.state.totalTip}</p>
+          <p>perperson: ${this.state.tipPerPerson}</p>
+        </div>
+      </Container>
     );
 
   }
