@@ -1,5 +1,19 @@
-  body{
-    /* background: red; */
-    /* background: url("../public/doodles.png"); */
-     
-  }
+body{
+  background-image: url(/doodles.png);
+
+}
+
+.container {
+  text-align: center;
+}
+
+.counter {
+  border: 15px solid black;
+  letter-spacing: 15px;
+  text-align-last: center;
+  font-weight: bold;
+  font-size: large;
+  position: absolute; 
+  left: 0 ; right: 0; bottom: 0; 
+  height:[footer-height] 
+}
