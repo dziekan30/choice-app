@@ -50,17 +50,17 @@ export default class Home extends Component {
               <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
             </label>
             <label>
-              Service: %
+              Procent napiwku: %
               <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
             </label>
             <label>
-              Party Size:
+              Ilosc ludzi:
               <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
             </label>
             <input type="submit" />
           </form>
-          <p>tip: ${this.state.totalTip}</p>
-          <p>perperson: ${this.state.tipPerPerson}</p>
+          <p>Napiwek: ${this.state.totalTip}</p>
+          <p>Na Osobe: ${this.state.tipPerPerson}</p>
         </div>
       </Container>
     );
