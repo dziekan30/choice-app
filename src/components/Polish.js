@@ -43,22 +43,24 @@ export default class Home extends Component {
       <Container>
         <div className="container">
           <h1>Oblicz Napiwek</h1>
-          <form onSubmit={this.genTip}>
-            <label>
-              Suma Rachunku:
-              <i class="fas fa-dollar-sign"></i>
-              <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
-            </label>
-            <label>
-              Procent napiwku: %
-              <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
-            </label>
-            <label>
-              Ilosc ludzi:
-              <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
-            </label>
-            <input type="submit" />
-          </form>
+          <div className="my-tip">
+            <form onSubmit={this.genTip}>
+              <label className="col-12 label">
+                Suma Rachunku:
+                <i class="fas fa-dollar-sign"></i>
+                <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
+              </label>
+              <label className="col-12 label">
+                Procent napiwku: %
+                <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
+              </label>
+              <label className="col-12 label">
+                Ilosc ludzi:
+                <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
+              </label>
+              <input className="col-12 label" type="submit" />
+            </form>
+          </div>
           <p>Napiwek: ${this.state.totalTip}</p>
           <p>Na Osobe: ${this.state.tipPerPerson}</p>
         </div>
