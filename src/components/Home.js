@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { MDBInput } from "mdbreact";
-import { Container } from 'react-bootstrap';
+import { Container, Modal, Button } from 'react-bootstrap';
+
 
 export default class Home extends Component {
   state = {
@@ -8,8 +9,9 @@ export default class Home extends Component {
     service: "",
     partySize: "",
     totalTip: "",
-    tipPerPerson: ""
+    tipPerPerson: "",
   }
+
   handleTotal = (event) => {
     this.setState({
       total: event.target.value
@@ -38,31 +40,47 @@ export default class Home extends Component {
     })
   }
 
+
   render() {
+    // const [hidden, setHidden] = useState(false);
+    // const toggle = () => setHidden(!hidden);
+
     return (
-      <Container>
-        <div className="container">
-          <h1>Count My Tip</h1>
-          <form onSubmit={this.genTip}>
-            <label>
-              Bill Total:
-              <i class="fas fa-dollar-sign"></i>
-              <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
-            </label>
-            <label>
-              Service: %
-              <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
-            </label>
-            <label>
-              Party Size:
-              <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
-            </label>
-            <input type="submit" />
-          </form>
-          <p>tip: ${this.state.totalTip}</p>
-          <p>perperson: ${this.state.tipPerPerson}</p>
-        </div>
-      </Container>
+      <div>
+        <Container>
+          <div className="container">
+            <h1>Count My Tip</h1>
+            <div className="my-tip">
+              <form onSubmit={this.genTip}>
+                <label className="col-12 label">
+                  Bill Total:
+                  <i className="fas fa-dollar-sign "></i>
+                  <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
+                </label>
+                <label className="col-12 label">
+                  Service: %
+                  <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
+                </label>
+                <label className="col-12 label">
+                  Party Size:
+                  <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
+                </label>
+                <input className="col-12 label" type="submit" />
+              </form>
+
+
+              {/* <Modal isOpen={hidden} toggle={toggle}>
+                <p>tip: ${this.state.totalTip}</p>
+                <p>perperson: ${this.state.tipPerPerson}</p>
+
+              </Modal> */}
+
+
+
+            </div>
+          </div>
+        </Container>
+      </div>
     );
 
   }

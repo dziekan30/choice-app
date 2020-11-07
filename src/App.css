@@ -5,6 +5,7 @@ body{
 
 .container {
   text-align: center;
+  margin-top: 4%;
 }
 
 .counter {
@@ -19,8 +20,19 @@ body{
 }
 
 .header {
-  
-  background-color: darkblue;
-  overflow: hidden;
-  padding: 20px 10px;
+  border: 15px solid black;
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  width: auto;
+  left: 0 ; right: 0; bottom: 0; 
+}
+.my-tip{
+  margin-top: 4%;
+  line-height: 1.6;
+}
+.label{
+  max-width: 60%;
 }
