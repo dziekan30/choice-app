@@ -1,14 +1,30 @@
 import React, { Component } from 'react'
 import { MDBInput } from "mdbreact";
 import { Container } from 'react-bootstrap';
+import ReactModal from 'react-modal';
+import PolishCounter from './PolishCounter'
 
-export default class Home extends Component {
-  state = {
-    total: "",
-    service: "",
-    partySize: "",
-    totalTip: "",
-    tipPerPerson: ""
+
+export default class Polish extends Component {
+  constructor() {
+    super();
+    this.state = {
+      total: "",
+      service: "",
+      partySize: "",
+      totalTip: "",
+      tipPerPerson: "",
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
   }
   handleTotal = (event) => {
     this.setState({
@@ -40,31 +56,45 @@ export default class Home extends Component {
 
   render() {
     return (
-      <Container>
-        <div className="container">
-          <h1>Oblicz Napiwek</h1>
-          <div className="my-tip">
-            <form onSubmit={this.genTip}>
-              <label className="col-12 label">
-                Suma Rachunku:
-                <i class="fas fa-dollar-sign"></i>
-                <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
-              </label>
-              <label className="col-12 label">
-                Procent napiwku: %
-                <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
-              </label>
-              <label className="col-12 label">
-                Ilosc ludzi:
-                <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
-              </label>
-              <input className="col-12 label" type="submit" />
-            </form>
+      <div>
+        <Container>
+          <div className="container">
+            <h1>Oblicz Napiwek</h1>
+            <div className="my-tip">
+              <form onSubmit={this.genTip}>
+                <label className="col-12 label">
+                  Suma Rachunku:
+                  <i className="fas fa-dollar-sign"></i>
+                  <MDBInput type="text" value={this.state.total} onChange={this.handleTotal} />
+                </label>
+                <label className="col-12 label">
+                  Procent napiwku: %
+                  <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
+                </label>
+                <label className="col-12 label">
+                  Ilosc ludzi:
+                  <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
+                </label>
+                <button className="btn btn-secondary col-12 label" onClick={this.handleOpenModal} type="submit" >Oblicz</button>
+              </form>
+              <div >
+                <ReactModal
+                  isOpen={this.state.showModal}
+                  contentLabel="Minimal Modal Example"
+                  className="Modal"
+                >
+                  <button className="btn btn-secondary modal-close" type="button" onClick={this.handleCloseModal}>Zamknij</button>
+                  <div>
+                    <h3 className="tip">Napiwek: ${this.state.totalTip}</h3>
+                    <h3 className="tip">Na Osobe: ${this.state.tipPerPerson}</h3>
+                  </div>
+                </ReactModal>
+              </div>
+            </div>
           </div>
-          <p>Napiwek: ${this.state.totalTip}</p>
-          <p>Na Osobe: ${this.state.tipPerPerson}</p>
-        </div>
-      </Container>
+        </Container>
+        <PolishCounter />
+      </div>
     );
 
   }

@@ -21,8 +21,8 @@ export default class header extends Component {
             </NavDropdown> */}
           </Nav>
           <Nav>
-            <Nav.Link href="/polish">Polish</Nav.Link>
-            <Nav.Link href="/home">English</Nav.Link>
+            <Nav.Link href="/polish"><img src="./poland.png" alt="" />Polish</Nav.Link>
+            <Nav.Link href="/home"><img src="./usa.png" alt="" />English</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
