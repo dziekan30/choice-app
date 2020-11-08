@@ -1,15 +1,30 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import { MDBInput } from "mdbreact";
-import { Container, Modal, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import ReactModal from 'react-modal';
+import Counter from './Counter'
 
 
 export default class Home extends Component {
-  state = {
-    total: "",
-    service: "",
-    partySize: "",
-    totalTip: "",
-    tipPerPerson: "",
+  constructor() {
+    super();
+    this.state = {
+      total: "",
+      service: "",
+      partySize: "",
+      totalTip: "",
+      tipPerPerson: "",
+      showModal: false
+    };
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
   }
 
   handleTotal = (event) => {
@@ -40,11 +55,7 @@ export default class Home extends Component {
     })
   }
 
-
   render() {
-    // const [hidden, setHidden] = useState(false);
-    // const toggle = () => setHidden(!hidden);
-
     return (
       <div>
         <Container>
@@ -65,21 +76,25 @@ export default class Home extends Component {
                   Party Size:
                   <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
                 </label>
-                <input className="col-12 label" type="submit" />
+                <input className="btn btn-secondary col-12 label" onClick={this.handleOpenModal} type="submit" />
               </form>
-
-
-              {/* <Modal isOpen={hidden} toggle={toggle}>
-                <p>tip: ${this.state.totalTip}</p>
-                <p>perperson: ${this.state.tipPerPerson}</p>
-
-              </Modal> */}
-
-
-
+              <div >
+                <ReactModal
+                  isOpen={this.state.showModal}
+                  contentLabel="Minimal Modal Example"
+                  className="Modal"
+                >
+                  <button className="btn btn-secondary modal-close" type="button" onClick={this.handleCloseModal}>Close</button>
+                  <div>
+                    <h3 className="tip">Tip: ${this.state.totalTip}</h3>
+                    <h3 className="tip">Perperson: ${this.state.tipPerPerson}</h3>
+                  </div>
+                </ReactModal>
+              </div>
             </div>
           </div>
         </Container>
+        <Counter />
       </div>
     );
 
