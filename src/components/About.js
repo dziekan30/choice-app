@@ -7,10 +7,10 @@ export default class About extends Component {
     return (
       <Container>
         <div className="row about-frame">
-          <div class="col col-lg-6 ">
+          <div className="col col-lg-6 ">
             <img className="picture about-img" src="./kamil-camel.jpg" alt="" />
           </div>
-          <div class="col col-lg-6 about-text">
+          <div className="col col-lg-6 about-text">
             <h1>Hi I am Kamil Dziekan </h1>
             <h2>Software Engineer</h2>
             <hr />
