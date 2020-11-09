@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 export default class About extends Component {
 
