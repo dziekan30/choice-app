@@ -11,22 +11,21 @@ export default class About extends Component {
             <img className="picture about-img" src="./kamil-camel.jpg" alt="" />
           </div>
           <div className="col col-lg-6 about-text">
-            <h1>Hi I am Kamil Dziekan </h1>
-            <h2>Software Engineer</h2>
+            <h1 className="about">Hi I am Kamil Dziekan </h1>
+            <h2 className="about">Software Engineer</h2>
             <hr />
             <br />
-
-            <h5>
+            <h5 className="about-bio">
               The purpose of this app was to help people count the tip.
               I know most of the people hate doing that or don't know how.
               Soo why not help them with this app.
               I hope you will enjoy using it, like I was enjoying making it.
             </h5>
             <br />
-            <div>
-              <h5>Below you will find my others apps</h5>
+            <div >
+              <h5 className="about-icon">Below you will find my others apps</h5>
               <a href="https://github.com/dziekan30">
-                <i className="fab fa-github fa-2x icon"></i>
+                <i className="fab fa-github fa-2x icon "></i>
               </a>
               <a href="https://dziekan30.github.io/">
                 <i className="fas fa-laptop-code fa-2x icon"></i>

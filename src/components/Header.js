@@ -7,11 +7,11 @@ export default class header extends Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">Tip your Service</Navbar.Brand>
+        <Navbar.Brand >Tip your Service</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Link className="nav-link" to="/about" >About</Link> */}
+            <Link className="nav-link" to="/about" >About</Link>
             {/* <Nav.Link href="#pricing">Pricing</Nav.Link> */}
             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
