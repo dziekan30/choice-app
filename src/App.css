@@ -1,14 +1,12 @@
 body{
   background-image: url(/doodles.png);
   font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
-
 }
 
 .container {
   text-align: center;
   margin-top: 4%;
 }
-
 .counter {
   border: 10px solid black;
   letter-spacing: 8px;
@@ -17,9 +15,7 @@ body{
   font-size: 300%;
   position: absolute; 
   left: 0 ; right: 0; bottom: 0; 
-  /* margin-top: 200%; */
 }
-
 .header {
   border: 15px solid black;
   padding: 60px;
@@ -37,7 +33,6 @@ body{
 .label{
   max-width: 60%;
 }
-
 .Modal {
   position: absolute;
   top: 25%;
@@ -61,16 +56,21 @@ body{
   height: 100%;
   width: 55%;
 }
-
 .about-frame{
   text-align: center;
   margin-top: 10%;
 }
-.about-text{
+/* .about-text{
   margin-top: 5%;
+  font-size: 80%;
 }
+.about{
+  font-size: 80%;
+}
+.about-bio{
+  font-size: 60%;
+} */
 .about-img{
-  /* margin: auto; */
   border: 20px solid black;
   box-shadow: 0 0 2px 40px rgba(0, 140, 186, 0.5);
 }
@@ -79,4 +79,39 @@ body{
   margin-right: 2%;
   margin-left: 2%;
 }
+.counter-text{
+  font-size: 80%;
+}
 
+@media screen and (max-width: 600px) {
+  .counter-text{
+    font-size: 40%;
+    font-style: center;
+  }
+  .picture{
+    height: 100%;
+    width: 80%;
+  }
+  .about-img{
+    border: 5px solid black;
+    box-shadow: 0 0 1px 10px rgba(0, 140, 186, 0.5);
+  }
+  .about-icon{
+    font-size: 20%;
+  }
+  .about-text{
+    margin-top: 4%;
+  }
+  .about-bio{
+    font-size: 8px;
+  }
+  .about{
+    font-size: 12px;
+  }
+  .icon{
+    color: black;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  
+}
