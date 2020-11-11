@@ -1,7 +1,7 @@
 import React from "react";
 import ReactModal from 'react-modal';
 
-export default class Modall extends React.Component {
+export default class Modal extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -20,6 +20,7 @@ export default class Modall extends React.Component {
     this.setState({ showModal: false });
   }
 
+
   render() {
     return (
       <div>
@@ -35,5 +36,4 @@ export default class Modall extends React.Component {
   }
 }
 
-// const props = {};
 
