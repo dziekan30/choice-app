@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home'
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
@@ -10,22 +10,36 @@ import Polish from './components/Polish'
 
 
 
-function App() {
-  return (
-    <div>
-      <BrowserRouter>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/polish" component={Polish} />
-          <Route path="/Home" component={Home} />
-          <Route path="/" component={Home} />
-          <Route component={Error} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
-}
+export default class App extends Component {
+  // componentDidMount() {
+  //   fetch("https://api.countapi.xyz/update/choice/5ca7d089-65e9-4169-88c6-9a1f728189c5/?amount=1")
+  //     .then(res => res.json())
+  //     .then(res => {
+  //       countEL.innerHTML = res.value
+  //     })
+  //   const countEL =
+  //     document.getElementById('count')
+  // };
+  render() {
 
-export default App;
+
+    return (
+      <div>
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/polish" component={Polish} />
+            <Route path="/Home" component={Home} />
+            <Route path="/" component={Home} />
+            <Route component={Error} />
+          </Switch>
+        </BrowserRouter>
+        {/* <div className="counter">
+          <h5 className="counter-text">This page was visit <span id="count">0</span> times.</h5>
+        </div> */}
+      </div>
+    );
+  }
+}

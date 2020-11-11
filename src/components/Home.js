@@ -94,7 +94,7 @@ export default class Home extends Component {
             </div>
           </div>
         </Container>
-        <Counter />
+        {/* <Counter /> */}
       </div>
     );
 
