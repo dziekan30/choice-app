@@ -8,8 +8,6 @@ import About from './components/About'
 import Polish from './components/Polish'
 
 
-
-
 export default class App extends Component {
   // componentDidMount() {
   //   fetch("https://api.countapi.xyz/update/choice/5ca7d089-65e9-4169-88c6-9a1f728189c5/?amount=1")
@@ -21,7 +19,6 @@ export default class App extends Component {
   //     document.getElementById('count')
   // };
   render() {
-
 
     return (
       <div>
