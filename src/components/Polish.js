@@ -71,7 +71,7 @@ export default class Polish extends Component {
                   Procent napiwku: %
                   <MDBInput type="text" value={this.state.service} onChange={this.handleService} />
                 </label>
-                <label className="col-12 label">
+                <label className="col-12 label" placeholder="Prosze podac ilosc osob ">
                   Ilosc ludzi:
                   <MDBInput type="text" value={this.state.partySize} onChange={this.handleParty} />
                 </label>
@@ -85,8 +85,9 @@ export default class Polish extends Component {
                 >
                   <button className="btn btn-secondary modal-close" type="button" onClick={this.handleCloseModal}>Zamknij</button>
                   <div>
-                    <h3 className="tip">Napiwek: ${this.state.totalTip}</h3>
-                    <h3 className="tip">Na Osobe: ${this.state.tipPerPerson}</h3>
+                    {/* request.dog ? request.dog.default_image_url : '#' " */}
+                    <h3 className="tip">Napiwek: ${this.state.totalTip}  </h3>
+                    <h3 className="tip" >Na Osobe: ${this.state.tipPerPerson}</h3>
                   </div>
                 </ReactModal>
               </div>

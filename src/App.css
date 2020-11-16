@@ -6,6 +6,7 @@ body{
 .container {
   text-align: center;
   margin-top: 4%;
+  
 }
 .counter {
   border: 10px solid black;
@@ -15,6 +16,8 @@ body{
   font-size: 300%;
   position: absolute; 
   left: 0 ; right: 0; bottom: 0; 
+  margin-top: 10%;
+  /* margin-top: 40%; */
 }
 .header {
   border: 15px solid black;
