@@ -14,7 +14,7 @@ export default class Counter extends Component {
   render() {
     return (
       <div className="counter">
-        <h5 className="counter-text">Ta strona została odwiedzona: <span id="count">0</span> razy.</h5>
+        <h5 className="counter-text">Strona została odwiedzona: <span id="count">0</span> razy.</h5>
       </div>
     )
 
