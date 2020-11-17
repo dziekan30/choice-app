@@ -1,24 +1,25 @@
 body{
   background-image: url(/doodles.png);
   font-family: Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif; 
+  margin: 0;
 }
 
 .container {
   text-align: center;
   margin-top: 4%;
-  
 }
 .counter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   border: 10px solid black;
   letter-spacing: 8px;
-  text-align-last: center;
   font-weight: bold;
   font-size: 300%;
-  position: absolute; 
-  left: 0 ; right: 0; bottom: 0; 
-  margin-top: 10%;
-  /* margin-top: 40%; */
 }
+
 .header {
   border: 15px solid black;
   padding: 60px;
