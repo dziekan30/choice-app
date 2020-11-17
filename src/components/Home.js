@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { MDBInput } from "mdbreact";
-import { Container, Form, Button } from 'react-bootstrap';
+// import { MDBInput } from "mdbreact";
+import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
 import Counter from './Counter'
 
