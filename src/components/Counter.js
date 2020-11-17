@@ -13,8 +13,11 @@ export default class Counter extends Component {
   };
   render() {
     return (
-      <div className="counter">
-        <h5 className="counter-text">This page was visit:  <span id="count">0</span> times.</h5>
+      <div class="wrapper">
+        {/* <div className="counter"> */}
+        <h5 id="footer" >This page was visit:  <span id="count">0</span> times.</h5>
+        {/* </div> */}
+
       </div>
     )
 
