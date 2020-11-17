@@ -6,12 +6,12 @@ import Counter from './Counter'
 
 
 export default class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       total: "",
       service: "",
-      partySize: "",
+      partySize: 1,
       totalTip: "",
       tipPerPerson: "",
       showModal: false
@@ -22,29 +22,24 @@ export default class Home extends Component {
   handleOpenModal() {
     this.setState({ showModal: true });
   }
-
   handleCloseModal() {
     this.setState({ showModal: false });
   }
-
   handleTotal = (event) => {
     this.setState({
       total: event.target.value
     })
   }
-
   handleService = (event) => {
     this.setState({
       service: event.target.value
     })
   }
-
   handleParty = (event) => {
     this.setState({
       partySize: event.target.value
     })
   }
-
   genTip = (event) => {
     event.preventDefault();
     let tip = parseFloat(this.state.total * (this.state.service / 100)).toFixed(2)
@@ -56,6 +51,7 @@ export default class Home extends Component {
   }
 
   render() {
+
     return (
       <div>
         <Container>
@@ -66,7 +62,7 @@ export default class Home extends Component {
                 <Form.Group className="col-12 label">
                   <i className="fas fa-dollar-sign "></i>
                   <Form.Label>Bill Total:</Form.Label>
-                  <Form.Control type="text" value={this.state.total} onChange={this.handleTotal} placeholder="Enter Bill Amount" />
+                  <Form.Control type="number" value={this.state.total} onChange={this.handleTotal} placeholder="Enter Bill Amount" />
                 </Form.Group>
 
                 <Form.Group className="col-12 label">
