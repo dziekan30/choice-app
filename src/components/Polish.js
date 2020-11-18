@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { MDBInput } from "mdbreact";
 import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
 import PolishCounter from './PolishCounter'
-
 
 export default class Polish extends Component {
   constructor() {

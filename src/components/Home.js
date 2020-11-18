@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-// import { MDBInput } from "mdbreact";
 import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
 import Counter from './Counter'
-
 
 export default class Home extends Component {
   constructor(props) {
@@ -51,7 +49,6 @@ export default class Home extends Component {
   }
 
   render() {
-
     return (
       <div>
         <Container>
@@ -74,9 +71,7 @@ export default class Home extends Component {
                   <Form.Label>Party Size:</Form.Label>
                   <Form.Control type="number" value={this.state.partySize} onChange={this.handleParty} placeholder="Enter number of the party" />
                 </Form.Group>
-
                 <button className="btn btn-secondary col-12 label" onClick={this.handleOpenModal} type="submit" >Submit</button>
-
               </Form>
               <div >
                 <ReactModal
