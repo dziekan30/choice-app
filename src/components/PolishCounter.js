@@ -14,7 +14,10 @@ export default class Counter extends Component {
   render() {
     return (
       <div class="wrapper">
-        <h5 id="footer" >Strona została odwiedzona:  <span id="count">0</span> razy.</h5>
+        <div id="footer">
+          <h5  >Strona została odwiedzona:  <span id="count">0</span> razy.</h5>
+
+        </div>
       </div>
     )
 
