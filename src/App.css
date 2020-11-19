@@ -10,23 +10,21 @@ body{
   margin-bottom: 2%;
 }
 
+
+
 .wrapper {
   min-height: 100%;
   position: relative;
-  padding-bottom: 10%; /* footer's height */
-  bottom: 0;
+  padding-bottom:90px; /* footer's height */
 }
 #footer {
-  letter-spacing: 6px;
-  font-weight: bold;
-  font-size: 200%;
   width: 100%;
-  /* position: absolute; */
-  position: fixed;
+  background-color: #4c66a4;
+  color: #fff;
+  position: absolute;
   left: 0px;
   bottom: 0px;
   text-align: center;
-  
 }
 
 .header {
