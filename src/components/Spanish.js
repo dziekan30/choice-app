@@ -113,3 +113,18 @@
 //     bottom: 0px;
 //     text-align: center;
 //   }
+
+// .wrapper {
+//       min-height: 100%;
+//       position: relative;
+//       padding-bottom:90px; /* footer's height */
+//     }
+//     #footer {
+//       width: 100%;
+//       background-color: #4c66a4;
+//       color: #fff;
+//       position: absolute;
+//       left: 0px;
+//       bottom: 0px;
+//       text-align: center;
+//     }
