@@ -16,6 +16,7 @@ export default class Counter extends Component {
       <div class="wrapper">
         <div id="footer">
           <h5  >This page was visit:  <span id="count">0</span> times.</h5>
+          {/* <h5  >This page was visit:  <span id="count">{this.props.id}</span> times.</h5> */}
 
         </div>
       </div>
