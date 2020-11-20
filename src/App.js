@@ -6,22 +6,25 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header'
 import About from './components/About'
 import Polish from './components/Polish'
+// import Classprops from './components/Classprops'
+
 
 
 export default class App extends Component {
-  // componentDidMount() {
-  //   fetch("https://api.countapi.xyz/update/choice/5ca7d089-65e9-4169-88c6-9a1f728189c5/?amount=1")
-  //     .then(res => res.json())
-  //     .then(res => {
-  //       countEL.innerHTML = res.value
-  //     })
-  //   const countEL =
-  //     document.getElementById('count')
-  // };
+  componentDidMount() {
+    fetch("https://api.countapi.xyz/update/choice/5ca7d089-65e9-4169-88c6-9a1f728189c5/?amount=1")
+      .then(res => res.json())
+      .then(res => {
+        countEL.innerHTML = res.value
+      })
+    const countEL =
+      document.getElementById('count')
+  };
   render() {
 
     return (
       <div>
+        {/* <Classprops id="count" /> */}
         <BrowserRouter>
           <Header />
           <Switch>
@@ -33,9 +36,6 @@ export default class App extends Component {
             <Route component={Error} />
           </Switch>
         </BrowserRouter>
-        {/* <div className="counter">
-          <h5 className="counter-text">This page was visit <span id="count">0</span> times.</h5>
-        </div> */}
       </div>
     );
   }
