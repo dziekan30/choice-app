@@ -24,7 +24,7 @@ export default class header extends Component {
           <Nav>
             <Link className="nav-link" to="/polish"><img src="./poland.png" alt="" />Polish</Link>
             <Link className="nav-link" to="/home"><img src="./usa.png" alt="" />English</Link>
-            <Link className="nav-link" to=""><img src="./colombia.png" alt="" />Spanish</Link>
+            <Link className="nav-link" to="/spanish"><img src="./colombia.png" alt="" />Spanish</Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
