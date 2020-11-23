@@ -6,6 +6,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Header from './components/Header'
 import About from './components/About'
 import Polish from './components/Polish'
+import Spanish from './components/Spanish'
 // import Classprops from './components/Classprops'
 
 
@@ -30,6 +31,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/Spanish" component={Spanish} />
             <Route path="/polish" component={Polish} />
             <Route path="/Home" component={Home} />
             <Route path="/" component={Home} />
