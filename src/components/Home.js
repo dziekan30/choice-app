@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
 import Counter from './Counter'
-// import Classprops from './Classprops'
 
 
 export default class Home extends Component {
@@ -91,8 +90,11 @@ export default class Home extends Component {
             </div>
           </div>
         </Container>
-        {/* <Classprops id="count" /> */}
-        <Counter />
+        <div class="wrapper">
+          <div id="footer">
+            <h5> This page was visit: <Counter /> times.</h5>
+          </div>
+        </div>
       </div>
     );
 
