@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
-import PolishCounter from './PolishCounter'
+import Counter from './Counter'
 
 export default class Polish extends Component {
   constructor() {
@@ -90,7 +90,11 @@ export default class Polish extends Component {
             </div>
           </div>
         </Container>
-        <PolishCounter />
+        <div class="wrapper">
+          <div id="footer">
+            <h5> Strona została odwiedzona: <Counter /> razy.</h5>
+          </div>
+        </div>
       </div>
     );
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Form } from 'react-bootstrap';
 import ReactModal from 'react-modal';
-
+import Counter from './Counter'
 
 export default class Spanish extends Component {
   constructor() {
@@ -60,17 +60,17 @@ export default class Spanish extends Component {
                 <Form.Group className="col-12 label">
                   <i className="fas fa-dollar-sign "></i>
                   <Form.Label>Suma de cuenta:</Form.Label>
-                  <Form.Control type="number" value={this.state.total} onChange={this.handleTotal} placeholder="Wpisz Sume Rachunku" />
+                  <Form.Control type="number" value={this.state.total} onChange={this.handleTotal} placeholder="Ingrese la suma de la factura" />
                 </Form.Group>
 
                 <Form.Group className="col-12 label">
                   <Form.Label> Porcentaje de propina: %</Form.Label>
-                  <Form.Control type="number" value={this.state.service} onChange={this.handleService} placeholder="Podaj procent napiwku" />
+                  <Form.Control type="number" value={this.state.service} onChange={this.handleService} placeholder="Ingrese un porcentaje de propina" />
                 </Form.Group>
 
                 <Form.Group className="col-12 label">
                   <Form.Label>Número de personas:</Form.Label>
-                  <Form.Control type="number" value={this.state.partySize} onChange={this.handleParty} placeholder="Prosze podac ilosc osob" />
+                  <Form.Control type="number" value={this.state.partySize} onChange={this.handleParty} placeholder="Ingrese el número de personas" />
                 </Form.Group>
                 <button className="btn btn-secondary col-12 label" onClick={this.handleOpenModal} type="submit" >Calcular</button>
               </Form>
@@ -90,6 +90,11 @@ export default class Spanish extends Component {
             </div>
           </div>
         </Container>
+        <div class="wrapper">
+          <div id="footer">
+            <h5> La página ha sido visitada: <Counter /> veces.</h5>
+          </div>
+        </div>
       </div>
     );
 
