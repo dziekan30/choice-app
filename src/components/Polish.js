@@ -65,7 +65,7 @@ export default class Polish extends Component {
 
                 <Form.Group className="col-12 label">
                   <Form.Label> Procent napiwku: %</Form.Label>
-                  <Form.Control type="number" value={this.state.service} onChange={this.handleService} placeholder="Podaj procent napiwku" />
+                  <Form.Control type="number" value={this.state.service} onChange={this.handleService} placeholder="Podaj % napiwku" />
                 </Form.Group>
 
                 <Form.Group className="col-12 label">
